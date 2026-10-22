@@ -305,6 +305,111 @@
   .mini-btn svg{width:13px;height:13px}
   .mini-btn:hover{background:var(--sky)}
 
+  /* ---------- FAQ ---------- */
+  .faq{
+    padding:84px 0 92px;
+  }
+  .faq .wrap{max-width:820px}
+  .faq-head{
+    text-align:center;
+    margin-bottom:28px;
+  }
+  .faq-head h2{
+    font-size:clamp(1.8rem,4vw,2.5rem);
+    color:var(--navy-deep);
+  }
+  .faq-head p{
+    margin:12px auto 0;
+    max-width:520px;
+    color:var(--navy-soft);
+    font-size:1.02rem;
+  }
+  .faq-group{
+    margin-top:12px;
+    border-radius:14px;
+    overflow:hidden;
+    background:var(--navy);
+  }
+  .faq-group > summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:20px 24px;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:1.2rem;
+    letter-spacing:.02em;
+    color:#fff;
+  }
+  .faq-group > summary::-webkit-details-marker{display:none}
+  .faq-group > summary::after{
+    content:"+";
+    flex:none;
+    width:32px;height:32px;
+    border-radius:50%;
+    background:var(--sky);
+    color:var(--navy-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.4rem;
+    line-height:1;
+  }
+  .faq-group[open] > summary::after{content:"\2212"}
+  .faq-group > summary:hover{background:var(--navy-deep)}
+  .faq-group > summary:focus-visible{outline:3px solid var(--sky);outline-offset:-3px}
+  .faq-group-body{
+    padding:14px 14px 4px;
+    background:var(--sky-pale);
+  }
+  .faq-item{
+    background:#fff;
+    border:1px solid #e0e9f1;
+    border-radius:12px;
+    margin-bottom:10px;
+    overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:18px 22px;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:1.05rem;
+    line-height:1.25;
+    color:var(--navy-deep);
+  }
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item summary::after{
+    content:"+";
+    flex:none;
+    width:30px;height:30px;
+    border-radius:50%;
+    background:var(--sky);
+    color:var(--navy-deep);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.35rem;
+    line-height:1;
+  }
+  .faq-item[open] summary::after{content:"\2212"}
+  .faq-item summary:hover{background:var(--sky-pale)}
+  .faq-item summary:focus-visible{outline:3px solid var(--navy);outline-offset:-3px}
+  .faq-answer{
+    padding:2px 22px 20px;
+    color:#3f5163;
+    font-size:1rem;
+    line-height:1.6;
+  }
+  .faq-answer p{margin:0 0 12px}
+  .faq-answer p:last-child{margin-bottom:0}
+  .faq-answer ul{margin:0 0 12px;padding-left:20px}
+  .faq-answer a{color:var(--navy);font-weight:700}
+
   /* ---------- Reviews ---------- */
   .reviews{
     background:var(--sky-pale);
@@ -777,7 +882,6 @@
     </div>
   </section>
 
-
   <section class="reviews">
     <div class="wrap">
       <div class="reviews-head">
@@ -833,6 +937,142 @@
     </div>
   </section>
 
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="faq-head">
+        <h2>Frequently asked questions</h2>
+        <p>Everything you need to know about ordering, handpicking, shipping and payment.</p>
+      </div>
+      <details class="faq-group">
+        <summary>General information &amp; ordering</summary>
+        <div class="faq-group-body">
+        <details class="faq-item">
+          <summary>What is the minimum order value?</summary>
+          <div class="faq-answer">
+          <p>Our minimum order value is €500, excluding shipping costs and any applicable VAT. For eligible intra-EU business transactions with a valid VAT number, VAT may be reverse-charged. Otherwise, VAT may apply.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you send me your price list?</summary>
+          <div class="faq-answer">
+          <p>Of course! We have different fixed price lists depending on what you are looking for. Please tell us a little about your store, what you currently sell, and which styles or categories interest you. We will then send you the most relevant price list.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to own a registered business to place an order?</summary>
+          <div class="faq-answer">
+          <p>We work with clothing stores and resellers, including people starting a resale business. You do not necessarily need a registered business or VAT number, but we do not sell to private shoppers. For customers in the EU without a valid VAT number, 21% VAT is added, subject to applicable tax rules. Eligible intra-EU B2B transactions may qualify for reverse charging.</p>
+          </div>
+        </details>
+        </div>
+      </details>
+      <details class="faq-group">
+        <summary>Handpicking &amp; product selection</summary>
+        <div class="faq-group-body">
+        <details class="faq-item">
+          <summary>How does online handpicking work?</summary>
+          <div class="faq-answer">
+          <p>Online handpicking has a €500 minimum order value. Before your appointment, please send us a moodboard, inspiration pictures, or a detailed wishlist. We carefully prepare a personalized pre-selection of clothing and accessories based on your wishes, preferred styles, and your store’s needs.</p>
+          <p>A 20% deposit (€100) is required before we begin preparing your selection. It is deducted from your final invoice. The deposit is refundable if you cancel at least 48 hours before your appointment; cancellations made less than 48 hours in advance are non-refundable.</p>
+          <p>During a scheduled WhatsApp or FaceTime video call, you choose each piece individually. Your yes/no decisions during the call are final. We do not remove or exchange selected items after the call, or repeat a full video review of all pieces, except for items flagged during our quality control. We put considerable care into selecting and packing each order, so please decide carefully during the call.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can we handpick clothing per kilogram?</summary>
+          <div class="faq-answer">
+          <p>Yes! Warehouse handpicking is available at €15 per kilogram, exclusively during an in-person warehouse visit by appointment. It is not offered online. Online handpicking is priced per individual piece and requires a minimum €500 order. Both in-person handpicking and video-call handpicking sessions must be booked in advance.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I choose specific brands, styles, or categories?</summary>
+          <div class="faq-answer">
+          <p>Absolutely. Share your wishlist, preferred styles, categories, or brands before your appointment. Our focus is primarily on style rather than brands. We do stock branded clothing, including sportswear, but we do not specialize in brand-only or designer-only selections. A few designer pieces may be available, but they are not our main focus.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I order individual pieces online?</summary>
+          <div class="faq-answer">
+          <p>You can select items piece by piece during an online handpicking appointment, but we do not offer single-item retail orders. The minimum order value is €500.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can we purchase clothing bags by the kilogram?</summary>
+          <div class="faq-answer">
+          <p>Yes. We offer modern clothing bags featuring contemporary labels such as Zara and other popular brands, sold by the kilogram. We can also prepare vintage category bags by the kilogram upon request. Please contact us to check which vintage categories are currently available.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I visit your warehouse? Do I need an appointment?</summary>
+          <div class="faq-answer">
+          <p>Yes. Both in-person warehouse visits and online video handpicking sessions are by appointment only. Please contact us in advance. Handpicking by the kilogram is available only in person at our warehouse.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I see photos or videos of the clothing before ordering?</summary>
+          <div class="faq-answer">
+          <p>We can share videos and impressions of our warehouse and clothing collection to give you an idea of our stock. During online appointments, you will see your personalized pre-selection on video.</p>
+          <p><!-- TODO: add the real link for warehouse photos &amp; videos -->Warehouse photos &amp; videos: <a href="#">link coming soon</a></p>
+          </div>
+        </details>
+        </div>
+      </details>
+      <details class="faq-group">
+        <summary>Quality &amp; inventory</summary>
+        <div class="faq-group-body">
+        <details class="faq-item">
+          <summary>What is the quality or grade of your vintage clothing?</summary>
+          <div class="faq-answer">
+          <p>Our showroom racks and online video-call selections contain Grade A and Cream clothing. In-person warehouse handpicking by the kilogram includes a mix of Grade A and Grade B items.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Are the clothes washed and ready to sell?</summary>
+          <div class="faq-answer">
+          <p>Our clothing is vintage and secondhand, not brand-new. Even items in good, wearable condition may show normal signs of previous use. As a wholesale supplier, we do not wash clothing before sale. Retailers are responsible for washing and preparing items according to their own store standards.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How often do you restock your inventory?</summary>
+          <div class="faq-answer">
+          <p>We restock our showroom daily, adding approximately 1,000 or more pieces every week. Our team is constantly unpacking, sorting, and putting newly added clothing and accessories on the racks.</p>
+          </div>
+        </details>
+        </div>
+      </details>
+      <details class="faq-group">
+        <summary>Shipping, payments &amp; quality control</summary>
+        <div class="faq-group-body">
+        <details class="faq-item">
+          <summary>Is shipping included in the price? Do you ship worldwide?</summary>
+          <div class="faq-answer">
+          <p>Shipping is not included in our prices. We ship worldwide with UPS, and costs depend on your destination and the number of boxes.</p>
+          <p>Estimated shipping per box: Europe: around €50 or less; United Kingdom: around €50; United States: around €120; Australia: around €250. These are estimates; the final amount depends on the order and destination.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How long does it take to prepare and ship an order?</summary>
+          <div class="faq-answer">
+          <p>We aim to process orders quickly. After handpicking, we perform a complimentary quality control inspection at no extra charge, usually taking about an hour. If we find defects, we send photos or videos via WhatsApp so you can decide whether to keep or remove those affected pieces. Please reply promptly so we can finalize your invoice and packing list. Once payment arrives, we can ship your order.</p>
+          <p>Order processing usually takes 1 to 4 days, depending on order size, your response and payment speed, and weekends. This does not include delivery transit time.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What payment methods do you accept?</summary>
+          <div class="faq-answer">
+          <p>We accept bank transfers. For customers outside the EU, we recommend Wise for international payments. We do not accept PayPal or credit cards.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you accept returns or offer refunds?</summary>
+          <div class="faq-answer">
+          <p>We do not offer standard returns or refunds for wholesale orders, subject to applicable law. To prevent issues, we carry out a complimentary quality control inspection before shipping and send WhatsApp photos or videos of any defects we identify. If an issue was overlooked, we can arrange a credit toward your next order, as appropriate.</p>
+          </div>
+        </details>
+        </div>
+      </details>
+    </div>
+  </section>
+
   <section class="story">
     <div class="wrap">
       <div class="story-eyebrow">Our story</div>
@@ -840,7 +1080,7 @@
       <div class="story-grid">
         <div class="story-photo">
           <div class="story-photo-label">Photo of Helena &amp; Dieter</div>
-          <!-- add the photo as images/VWB_Website_HelenaDieter.jpg -->
+          <!-- add the photo as images/VWB_Website_HelenaDieter.jpeg -->
           <img src="images/VWB_Website_HelenaDieter.jpeg" alt="Helena and Dieter, founders of Vintage Wholesale Belgium" onerror="this.style.display='none'">
         </div>
         <div class="story-text">
@@ -863,8 +1103,8 @@
   <footer>
     <div class="wrap">
       <div class="foot-lines">
-        <a href="mailto:info@vintagewholesalebelgium.be">info@vintagewholesale.be</a>
-        <a href="https://wa.me/32472346180">+32.472.50.75.59</a>
+        <a href="mailto:info@vintagewholesale.be">info@vintagewholesale.be</a>
+        <a href="https://wa.me/32472507559">+32.472.50.75.59</a>
         <a href="https://www.instagram.com/vintagewholesalebelgium/">@vintagewholesalebelgium</a>
         <span>W.A. Mozartlaan 2, 1620 Drogenbos</span>
         <span>TVA BE1041945294</span>
